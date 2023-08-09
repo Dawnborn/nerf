@@ -39,6 +39,11 @@ def pose_spherical(theta, phi, radius):
 
 
 def load_blender_data(basedir, half_res=False, testskip=1):
+    '''
+    return
+        poses: [N,3,4],[R|t],reading from the nerf synthetic dataset (Blender, RUB)
+        render_poses: generate a seires of poses surrounding the object (origin)
+    '''
     splits = ['train', 'val', 'test']
     metas = {}
     for s in splits:

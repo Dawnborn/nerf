@@ -613,6 +613,7 @@ def train():
         print('NEAR FAR', near, far)
 
     elif args.dataset_type == 'blender':
+        # lego, the same as the nerf synthetic dataset
         images, poses, render_poses, hwf, i_split = load_blender_data(
             args.datadir, args.half_res, args.testskip)
         print('Loaded blender', images.shape,
